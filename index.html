@@ -3,98 +3,70 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Shaun Barrett</title>
-  <meta name="description" content="About me, current projects, and links." />
+  <title>Shaun Barrett — Links</title>
+  <meta name="description" content="Simple landing page with links to projects, profiles, and sections." />
   <style>
+    :root {
+      --bg: #f2f2f2;
+      --text: #333;
+      --muted: #555;
+      --link: #0066cc;
+      --button-bg: #ffffff;
+      --button-text: #333;
+      --button-border: #f2f2f2;
+    }
     body {
-      margin: 0; 
+      margin: 0;
       font: 16px/1.6 Helvetica, Arial, sans-serif;
-      background: #f2f2f2; 
-      color: #333;
+      background: var(--bg);
+      color: var(--text);
       padding: 40px 16px;
+      display: grid;
+      place-items: start center;
     }
-    .wrap {
-      width: 100%;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    h1 {
-      font-size: clamp(28px, 4vw, 40px);
-      margin: 0 0 4px;
-    }
-    p {
-      margin: 0.25rem 0 0;
-      color: #555;
-    }
-    a {
-      color: #0066cc; 
+    .wrap { width: 100%; max-width: 640px; }
+    header { text-align: center; margin-bottom: 20px; }
+    h1 { margin: 0; font-size: clamp(28px, 4vw, 40px); }
+    .tagline { color: var(--muted); margin-top: 6px; }
+    .links { display: grid; gap: 12px; margin-top: 20px; }
+    .btn {
+      display: block;
+      text-align: center;
+      background: var(--button-bg);
+      color: var(--button-text);
+      padding: 14px 16px;
+      border-radius: 6px;
       text-decoration: none;
+      border: 1px solid var(--button-border);
     }
-    a:hover {
-      text-decoration: underline;
-    }
-    section {
-      background: #f2f2f2;
-      border: 1px solid #f2f2f2;
-      border-radius: 4px;
-      padding: 20px;
-      margin: 16px 0;
-    }
-    ul {
-      padding-left: 1.25rem;
-      margin: 0.25rem 0 0;
-    }
-    li {
-      margin: 6px 0;
-    }
-    footer {
-      margin-top: 28px;
-      font-size: 14px;
-      color: #777;
-    }
+    .btn:hover { text-decoration: underline; }
+    .card { background: var(--bg); border: 1px solid var(--bg); border-radius: 4px; padding: 16px; margin-top: 16px; color: var(--muted); }
+    footer { margin-top: 24px; text-align: center; font-size: 14px; color: #777; }
   </style>
 </head>
 <body>
   <main class="wrap">
     <header>
       <h1>Shaun Barrett</h1>
-      <p>GIS & Data Engineer · London, UK</p>
+      <div class="tagline">GIS & Data Engineer · London, UK</div>
     </header>
 
-    <section>
-      <h2>About</h2>
-      <p>I build geospatial data products and analytics that support infrastructure, climate and local government projects. Previously at Xoala; worked with ArcGIS, QGIS, PostGIS, and Python-based ETL.</p>
-    </section>
+    <div class="links">
+      <a class="btn" href="projects.html">Projects / Work</a>
+      <a class="btn" href="about.html">About</a>
+      <a class="btn" href="current.html">Current</a>
+      <a class="btn" href="mailto:shaunventures@icloud.com">Email</a>
+      <a class="btn" href="https://www.linkedin.com/in/shaun-barrett" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://github.com/shaunventures" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn" href="https://www.strava.com/athletes/31820651" target="_blank" rel="noopener">Strava</a>
+    </div>
 
-    <section>
-      <h2>Current</h2>
-      <ul>
-        <li>Upgrading my Python + GDAL pipeline for automated geocoding</li>
-        <li>Training for a half marathon</li>
-        <li>Exploring roles in GIS/Data in London or remote</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Projects / Work</h2>
-      <ul>
-        <li><strong>FTTP Planning Toolkit</strong> – Spatial database + web map for rollout planning.</li>
-        <li><strong>EV Charging Siting</strong> – GIS model for demand & accessibility.</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Links</h2>
-      <p>
-        <a href="mailto:shaunventures@icloud.com">Email</a> ·
-        <a href="https://www.linkedin.com/in/shaun-barrett" target="_blank" rel="noopener">LinkedIn</a> ·
-        <a href="https://github.com/shaunventures" target="_blank" rel="noopener">GitHub</a> ·
-        <a href="https://www.strava.com/athletes/31820651" target="_blank" rel="noopener">Strava</a>
-      </p>
+    <section class="card">
+      I build geospatial data products and analytics for infrastructure, climate and local government projects. Previously at Xoala; tools include ArcGIS, QGIS, PostGIS and Python ETL.
     </section>
 
     <footer>
-      <span>© <span id="year"></span> Shaun Barrett</span>
+      © <span id="year"></span> Shaun Barrett
     </footer>
   </main>
 
