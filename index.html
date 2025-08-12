@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shaun Barrett</title>
+  <meta name="description" content="About me, current projects, and links." />
+  <style>
+    :root {
+      --bg: #0b0c10;
+      --fg: #e6edf3;
+      --muted: #9aa4ad;
+      --link: #8ab4f8;
+      --card: #111217;
+      --border: #1b1f24;
+      --accent: #23d18b;
+    }
+    html, body { height: 100%; }
+    body {
+      margin: 0; font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: var(--bg); color: var(--fg);
+      display: grid; place-items: start center; padding: 40px 16px;
+    }
+    .wrap { width: 100%; max-width: 800px; }
+    header { margin-bottom: 28px; }
+    h1 { font-size: clamp(28px, 4vw, 40px); margin: 0 0 4px; }
+    p { margin: 0.25rem 0 0; color: var(--muted); }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0));
+      border: 1px solid var(--border);
+      border-radius: 16px; padding: 20px; margin: 16px 0;
+    }
+    .list { padding-left: 1.25rem; margin: 0.25rem 0 0; }
+    .list li { margin: 6px 0; }
+    .grid { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+    .tag { display: inline-block; font-size: 12px; padding: 2px 8px; border: 1px solid var(--border); border-radius: 999px; color: var(--muted); margin-left: 8px; }
+    footer { margin-top: 28px; font-size: 14px; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <h1>Shaun Barrett</h1>
+      <p>GIS & Data Engineer · London, UK</p>
+    </header>
+
+    <section class="card">
+      <h2>About</h2>
+      <p>I build geospatial data products and analytics that support infrastructure, climate and local government projects. Previously at Xoala; worked with ArcGIS, QGIS, PostGIS, and Python-based ETL.</p>
+    </section>
+
+    <section class="card">
+      <h2>Current</h2>
+      <ul class="list">
+        <li>Upgrading my Python + GDAL pipeline for automated geocoding <span class="tag">side project</span></li>
+        <li>Training for a half marathon <span class="tag">running</span></li>
+        <li>Exploring roles in GIS/Data in London or remote <span class="tag">career</span></li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Projects / Work</h2>
+      <div class="grid">
+        <div class="card">
+          <strong>FTTP Planning Toolkit</strong>
+          <p class="muted">Spatial database + web map for rollout planning.</p>
+          <p><a href="#">Case study</a></p>
+        </div>
+        <div class="card">
+          <strong>EV Charging Siting</strong>
+          <p class="muted">GIS model for demand & accessibility.</p>
+          <p><a href="#">Notes</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Links</h2>
+      <p>
+        <a href="mailto:shaunbarrett96@gmail.com">Email</a> ·
+        <a href="https://www.linkedin.com/in/shaun-barrett" target="_blank" rel="noopener">LinkedIn</a> ·
+        <a href="#">GitHub</a> ·
+        <a href="#">Strava</a>
+      </p>
+    </section>
+
+    <footer>
+      <span>© <span id="year"></span> Shaun Barrett</span>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
