@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Current — Shaun Barrett</title>
+  <meta name="description" content="Current activities and projects by Shaun Barrett" />
+  <style>
+    :root { --bg: #f2f2f2; --text: #333; --muted: #555; --link: #0066cc; --border: #f2f2f2; }
+    body {
+      margin: 0; font: 16px/1.6 Helvetica, Arial, sans-serif;
+      background: var(--bg); color: var(--text);
+      padding: 40px 16px; display: grid; place-items: start center;
+    }
+    .wrap { width: 100%; max-width: 800px; }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    header { margin-bottom: 12px; text-align: center; }
+    h1 { margin: 0 0 4px; font-size: clamp(26px,4vw,36px); }
+    .muted { color: var(--muted); }
+    .nav { margin-bottom: 16px; text-align: center; }
+    section { background: var(--bg); border: 1px solid var(--border); border-radius: 4px; padding: 20px; margin: 12px 0; }
+    footer { margin-top: 20px; font-size: 14px; color: #777; text-align: center; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="nav"><a href="index.html">← Back to Home</a></div>
+    <header>
+      <h1>Current</h1>
+      <div class="muted">What I’m working on right now</div>
+    </header>
+
+    <section>
+      <ul>
+        <li>Upgrading my Python + GDAL pipeline for automated geocoding.</li>
+        <li>Training for a half marathon.</li>
+        <li>Exploring roles in GIS/Data in London or remote.</li>
+      </ul>
+    </section>
+
+    <footer>© <span id="year"></span> Shaun Barrett</footer>
+  </main>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
