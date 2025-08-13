@@ -11,9 +11,9 @@
       --text: #333;
       --muted: #555;
       --link: #0066cc;
-      --button-bg: #ffffff;
+      --button-bg: #e0e0e0; /* lighter grey than background */
       --button-text: #333;
-      --button-border: #f2f2f2;
+      --button-border: #e0e0e0;
     }
     body {
       margin: 0;
@@ -29,9 +29,9 @@
     h1 { margin: 0; font-size: clamp(28px, 4vw, 40px); }
     .tagline { color: var(--muted); margin-top: 6px; }
     .crest {
-      max-width: 160px;
+      max-width: 50px;
       display: block;
-      margin: 0 auto 16px auto;
+      margin: 10px auto;
     }
     .links { display: grid; gap: 12px; margin-top: 20px; }
     .btn {
@@ -52,8 +52,8 @@
 <body>
   <main class="wrap">
     <header>
-      <img src="barret crest image.png" alt="Barrett family crest" class="crest" />
       <h1>Shaun Barrett</h1>
+      <img src="barret crest image.png" alt="Barrett family crest" class="crest" />
       <div class="tagline">GIS & Data Engineer · London, UK</div>
     </header>
 
