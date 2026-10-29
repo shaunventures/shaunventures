@@ -7,3 +7,5 @@ Outside of work, I enjoy long-distance running, exploring environmental data pro
 ## Website
 
 https://shaunventures.dev
+
+<!-- Hosted on Cloudflare Workers; deploys automatically from main. -->
